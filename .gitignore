@@ -1,0 +1,12 @@
+# api #
+api-key.txt
+
+# jetBrains #
+.idea/
+
+# misc #
+bin/
+obj/
+company-house-consume.v3.ncrunchsolution.user
+
+company-house-consume.sln.DotSettings.user
