@@ -1,0 +1,1 @@
+# replace the contents of this file with an API key from https://developer.companieshouse.gov.uk/api/docs/index.html
