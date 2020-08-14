@@ -4,9 +4,9 @@ namespace company_house_consume.Models
 {
     public class Company
     {
-        public string Name;
-        public string CompanyNumber;
-        public Address Address;
+        public string Name { get; set; }
+        public string CompanyNumber { get; }
+        public Address Address { get; }
 
         public Company(SearchResponseCompanyModel src)
         {
@@ -20,6 +20,13 @@ namespace company_house_consume.Models
             Name = cbnr.Company_Name;
             CompanyNumber = cbnr.Company_Number;
             Address = cbnr.Registered_Office_Address;
+        }
+
+        public bool Equals(Company comparingCompany)
+        {
+            return Name == comparingCompany.Name
+                   && CompanyNumber == comparingCompany.CompanyNumber
+                   && Address.Equals(comparingCompany.Address);
         }
     }
 }

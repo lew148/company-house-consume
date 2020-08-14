@@ -7,5 +7,14 @@ namespace company_house_consume.Models
         public string Locality { get; set; }
         public string Premises { get; set; }
         public string Country { get; set; }
+
+        public bool Equals(Address comparingAddress)
+        {
+            return Address_Line_1 == comparingAddress.Address_Line_1
+                   && Postal_Code == comparingAddress.Postal_Code
+                   && Locality == comparingAddress.Locality
+                   && Premises == comparingAddress.Premises
+                   && Country == comparingAddress.Country;
+        }
     }
 }
